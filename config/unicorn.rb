@@ -5,7 +5,7 @@ worker_processes 2
 working_directory ENV['APP_ROOT']
 
 # ソケット経由で通信する
-listen File.expand_path('/tmp/unicorn_chef_rails_template.sock')
+listen File.expand_path('/tmp/unicorn_ec2-user.sock')
 pid File.expand_path('tmp/pids/unicorn.pid', ENV['RAILS_ROOT'])
 
 # ログ

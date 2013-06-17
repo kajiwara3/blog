@@ -9,11 +9,11 @@ set :default_stage, "staging"
 
 # color output setting
 require 'capistrano_colors'
-set :application, "fbb"
+set :application, "blog"
 
 # RVM
 require "rvm/capistrano"
-set :rvm_ruby_strig, "1.9.3"
+set :rvm_ruby_strig, "2.0.0"
 
 # git settings
 set :scm, :git
@@ -22,7 +22,7 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 
 # ssh settings
-set :use_sudo, false
+set :use_sudo, true
 set :default_run_options, :pty => true
 ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false
@@ -64,6 +64,6 @@ end
 after "deploy:update_code", :bundle_install
 
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
-after "deploy:update"
+#after "deploy:update"
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
 #before "deploy:migrate", "deploy:config_symlink"

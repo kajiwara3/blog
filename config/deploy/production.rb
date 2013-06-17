@@ -1,7 +1,7 @@
 # coding: utf-8
 # RVM
 #### rvmのパス
-set :rvm_path, '~/.rvm'
+set :rvm_path, '/home/ec2-user/.rvm'
 set :rvm_bin_path, "#{rvm_path}/bin"
 set :rvm_lib_path, "#{rvm_path}/lib"
 
@@ -14,10 +14,10 @@ set :deploy_to, "/home/#{user}"
 set :rails_env, "production"
 # server "202.53.209.40", :app, :web, :db, primary: true
 [:web, :app].each do |type|
-  role type, 'ec2-54-248-168-236.ap-northeast-1.compute.amazonaws.com'
+  role type, 'knife-solo-study.ap-northeast-1'
 end
 
-role :db, 'ec2-54-248-168-236.ap-northeast-1.compute.amazonaws.com', :primary => true
+role :db, 'knife-solo-study.ap-northeast-1', :primary => true
 
 # Bundle
 set :bundle_flags, ""
