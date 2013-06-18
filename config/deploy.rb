@@ -42,11 +42,6 @@ namespace :deploy do
     run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
   end
 
-  desc "Copy shared config files to current application."
-  task :config_symlink do
-    run "ln -s /home/ic-mente/config/database.yml #{release_path}/config/database.yml"
-  end
-
   namespace :db do
     desc "Create #{rails_env} Database"
     task :create do

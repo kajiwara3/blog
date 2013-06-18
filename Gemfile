@@ -26,6 +26,10 @@ end
 
 gem 'jquery-rails'
 
+gem 'execjs'
+# Javascript run time
+gem 'therubyracer'
+
 # Deploy with Capistrano
 # デプロイ
 gem 'capistrano'
