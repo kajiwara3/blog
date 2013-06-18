@@ -2,7 +2,7 @@
 worker_processes 2
 
 # RAILS ROOT
-working_directory ENV['APP_ROOT']
+working_directory "/home/ec2-user/current/"
 
 # ソケット経由で通信する
 listen File.expand_path('/tmp/unicorn_ec2-user.sock')

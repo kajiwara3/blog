@@ -28,6 +28,7 @@ ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false
 set :scm_verbose, true
 set :keep_releases, 10
+default_environment['APP_ROOT'] = "/home/ec2-user/current/"
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
