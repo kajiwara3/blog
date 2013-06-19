@@ -33,7 +33,7 @@ set :scm_verbose, true
 set :keep_releases, 10
 
 # set app environment
-default_environment['APP_ROOT'] = "/home/ec2-user/current/"
+default_environment['SOCKET_PATH'] = "/tmp/blog.sock"
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
