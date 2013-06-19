@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-
 gem 'unicorn'
 
 # Bundle edge Rails instead:
@@ -32,10 +31,13 @@ gem 'therubyracer'
 
 # Deploy with Capistrano
 # デプロイ
-gem 'capistrano'
-gem 'capistrano-ext'
-gem 'capistrano_colors'
-gem 'rvm-capistrano'
+group :development do
+  gem 'capistrano-unicorn', :require => false
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

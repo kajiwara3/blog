@@ -1,6 +1,7 @@
 # coding: utf-8
 # multistage setting
 require 'capistrano/ext/multistage'
+require 'capistrano-unicorn'
 
 set :stages, %w(production staging)
 
@@ -30,6 +31,8 @@ ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false
 set :scm_verbose, true
 set :keep_releases, 10
+
+# set app environment
 default_environment['APP_ROOT'] = "/home/ec2-user/current/"
 
 namespace :deploy do
@@ -60,6 +63,12 @@ task :bundle_install, :roles => :app do
 end
 
 after "deploy:update_code", :bundle_install
+
+# unicorn
+# app IS NOT preloaded
+after 'deploy:restart', 'unicorn:reload'
+# app preloaded
+after 'deploy:restart', 'unicorn:restart'
 
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
 #after "deploy:update"
