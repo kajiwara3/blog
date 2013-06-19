@@ -7,6 +7,8 @@ set :stages, %w(production staging)
 # default stage name
 set :default_stage, "staging"
 
+set :group_writable, false
+
 # color output setting
 require 'capistrano_colors'
 set :application, "blog"

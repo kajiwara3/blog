@@ -5,7 +5,7 @@ worker_processes 2
 working_directory "/home/ec2-user/current/"
 
 # ソケット経由で通信する
-listen File.expand_path('/tmp/unicorn_ec2-user.sock')
+listen File.expand_path('/tmp/blog.sock')
 pid File.expand_path('tmp/pids/unicorn.pid', ENV['RAILS_ROOT'])
 
 # ログ
