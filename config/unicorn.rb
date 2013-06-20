@@ -2,11 +2,9 @@
 worker_processes 2
 
 # RAILS ROOT
-#working_directory "/home/ec2-user/current/"
 working_directory File.expand_path ENV['RAILS_ROOT']
 
 # ソケット経由で通信する
-#listen File.expand_path('/tmp/blog.sock')
 listen File.expand_path ENV['SOCKET_PATH']
 pid File.expand_path('tmp/pids/unicorn.pid', ENV['RAILS_ROOT'])
 

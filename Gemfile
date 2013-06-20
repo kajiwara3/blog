@@ -34,7 +34,7 @@ gem 'therubyracer'
 group :development do
   gem 'capistrano-unicorn', :require => false
   gem 'capistrano'
-  gem 'capistrano-ext'
+  #gem 'capistrano-ext'
   gem 'capistrano_colors'
   gem 'rvm-capistrano'
 end
