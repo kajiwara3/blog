@@ -7,6 +7,7 @@ gem 'unicorn'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'mysql2'
 
 # Relic Monitoring
 gem 'newrelic_rpm'
