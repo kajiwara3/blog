@@ -2,6 +2,7 @@
 # multistage setting
 require 'capistrano/ext/multistage'
 require 'capistrano-unicorn'
+require 'bundler/capistrano'
 
 set :stages, %w(production staging)
 
