@@ -2,10 +2,10 @@
 worker_processes 2
 
 # RAILS ROOT
-working_directory File.expand_path ENV['RAILS_ROOT']
+working_directory ENV['RAILS_ROOT']
 
 # ソケット経由で通信する
-listen File.expand_path ENV['SOCKET_PATH']
+listen '/tmp/unicorn_blog.sock'
 pid File.expand_path('tmp/pids/unicorn.pid', ENV['RAILS_ROOT'])
 
 # ログ

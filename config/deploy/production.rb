@@ -1,7 +1,7 @@
 # coding: utf-8
 # RVM
 #### rvmのパス
-set :rvm_path, '/home/ec2-user/.rvm'
+set :rvm_path, '/usr/local/rvm'
 set :rvm_bin_path, "#{rvm_path}/bin"
 set :rvm_lib_path, "#{rvm_path}/lib"
 

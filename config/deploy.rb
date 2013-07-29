@@ -33,8 +33,8 @@ set :scm_verbose, true
 set :keep_releases, 10
 
 # set app environment
-default_environment['SOCKET_PATH'] = "/tmp/blog.sock"
-default_environment['TEST'] = "/tmp/blog.sock"
+#default_environment['SOCKET_PATH'] = "/tmp/blog.sock"
+#default_environment['TEST'] = "/tmp/blog.sock"
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
