@@ -2,7 +2,7 @@
 worker_processes 2
 
 # RAILS ROOT
-working_directory ENV['RAILS_ROOT']
+working_directory ENV['APP_ROOT']
 
 # ソケット経由で通信する
 listen '/tmp/unicorn_blog.sock'
